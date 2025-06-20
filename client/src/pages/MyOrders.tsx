@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
-import { dummyOrders } from "../assets/assets";
 
 const MyOrders = () => {
-  const { axios, user, navigate, toast } = useAppContext();
+  const { axios, user, toast } = useAppContext();
   const [myOrders, setMyOrders] = useState<any>([]);
   const { currency } = useAppContext();
 

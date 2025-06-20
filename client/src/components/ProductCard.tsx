@@ -1,4 +1,4 @@
-import React from "react";
+
 import { assets } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
 
@@ -6,7 +6,6 @@ const ProductCard = ({ product }: any) => {
   const {
     currency,
     addToCart,
-    UpdateCartItem,
     removeFromCart,
     cartItems,
     navigate,

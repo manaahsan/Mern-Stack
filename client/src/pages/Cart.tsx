@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
-import { assets, dummyAddress } from "../assets/assets";
+import { assets } from "../assets/assets";
 
 const Cart = () => {
   const {
@@ -220,7 +220,7 @@ const Cart = () => {
             </button>
             {showAddress && (
               <div className="absolute top-12 py-1 bg-white border border-gray-300 text-sm w-full">
-                {addresses?.map((address: any, index: number) => (
+                {addresses?.map((address: any) => (
                   <p
                     onClick={() => {
                       setselectedAddress(address);
