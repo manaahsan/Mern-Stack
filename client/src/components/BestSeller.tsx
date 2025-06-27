@@ -7,10 +7,10 @@ const BestSeller = () => {
   return (
     <div className="mt-16">
       <p className="text-2xl md:text-3xl font-medium">Best Seller</p>
-      <div className="grid grid-cols-2 gap-3 mt-6 md:grid-cols-4 md:gap-6 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-3 mt-6 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
         {products
           .filter((product: any) => product.inStock)
-          .slice(0, 5)
+          .slice(0, 4)
           .map((product: any, index: Number) => (
             <ProductCard key={index} product={product} />
           ))}
