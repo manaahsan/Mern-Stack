@@ -6,7 +6,8 @@ import User from "../models/user.js";
 // place order COD : /api/order/cod
 export const placeOrderCOD = async (req, res) => {
   try {
-    const { userId, items, address } = req.body;
+    const { items, address } = req.body;
+    const {userId} = req;
     if (!address || !items) {
       return res
         .status(400)
@@ -40,7 +41,8 @@ export const placeOrderCOD = async (req, res) => {
 // place order COD : /api/order/stripe
 export const placeOrderStripe = async (req, res) => {
   try {
-    const { userId, items, address } = req.body;
+    const { items, address } = req.body;
+    const {userId} = req;
     const { origin } = req.headers;
     if (!address || !items) {
       return res
